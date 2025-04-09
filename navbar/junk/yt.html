@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Embed Multiple YouTube Videos</title>
+</head>
+<body>
+    <div id="youtube-player-1"></div>
+    <div id="youtube-player-2"></div>
+    <div id="youtube-player-3"></div>
+    <script>
+        var player1;
+var player2;
+var player3;
+
+function onYouTubeIframeAPIReady() {
+    player1 = new YT.Player('youtube-player-1', {
+        height: '315',
+        width: '560',
+        videoId: 'BsQqMeEcMMo', // Replace with your first video's ID
+        playerVars: {
+            'playsinline': 1
+        }
+    });
+
+    player2 = new YT.Player('youtube-player-2', {
+        height: '315',
+        width: '560',
+        videoId: 'pv7Ty2y_wMQ', // Replace with your second video's ID
+        playerVars: {
+            'playsinline': 1
+        }
+    });
+
+    player3 = new YT.Player('youtube-player-3', {
+        height: '315',
+        width: '560',
+        videoId: '1BigSTPT9uc', // Replace with your third video's ID
+        playerVars: {
+            'playsinline': 1
+        }
+    });
+    // Add more player initializations as needed for more videos
+}
+    </script>
+    <script async src="https://www.youtube.com/iframe_api"></script>
+</body>
+</html>
